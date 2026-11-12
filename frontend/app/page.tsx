@@ -100,19 +100,19 @@ export default function PortfolioDashboard() {
     new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 }).format(val);
 
   return (
-    <div className="min-h-screen bg-[#030712] text-slate-100 p-6 md:p-8 flex flex-col justify-between">
+    <div className="min-h-screen bg-[#060510] text-slate-100 p-6 md:p-8 flex flex-col justify-between">
       <div>
         {/* Header */}
-        <header className="flex flex-col md:flex-row md:items-center justify-between pb-6 border-b border-slate-800/80 gap-4">
+        <header className="flex flex-col md:flex-row md:items-center justify-between pb-6 border-b border-violet-500/20 gap-4">
           <div>
             <div className="flex items-center gap-2">
               <span className="bg-indigo-500/20 text-indigo-400 text-xs px-2.5 py-1 rounded font-mono font-bold tracking-wider border border-indigo-500/30">
                 POC-27
               </span>
-              <span className="text-xs text-slate-400 font-medium">Business Success & Executive Intelligence</span>
+              <span className="text-xs text-slate-400 font-medium">Infocreon Internship • Executive Margin Intelligence</span>
             </div>
-            <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight mt-1 text-white">
-              Product & Service Profitability Portfolio
+            <h1 className="text-xl md:text-2xl font-extrabold tracking-tight mt-1 text-white">
+              Infocreon Internship - Product & Service Profitability Portfolio
             </h1>
             <p className="text-slate-400 text-xs mt-1">
               Margin vs. Growth Quadrants, Unit Economics, & Strategic Lifecycle Rationalization
@@ -173,7 +173,7 @@ export default function PortfolioDashboard() {
         {/* KPI Ribbons */}
         {data && (
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
-            <div className="bg-slate-900/60 border border-slate-800/80 p-4 rounded-xl">
+            <div className="bg-[#0e0b22]/80 border border-violet-500/20 p-4 rounded-xl">
               <div className="flex items-center justify-between text-slate-400 text-xs">
                 <span>Gross Portfolio Revenue</span>
                 <DollarSign className="w-4 h-4 text-emerald-400" />
@@ -187,7 +187,7 @@ export default function PortfolioDashboard() {
               </div>
             </div>
 
-            <div className="bg-slate-900/60 border border-slate-800/80 p-4 rounded-xl">
+            <div className="bg-[#0e0b22]/80 border border-violet-500/20 p-4 rounded-xl">
               <div className="flex items-center justify-between text-slate-400 text-xs">
                 <span>Net Contribution Margin</span>
                 <PieIcon className="w-4 h-4 text-indigo-400" />
@@ -200,7 +200,7 @@ export default function PortfolioDashboard() {
               </div>
             </div>
 
-            <div className="bg-slate-900/60 border border-slate-800/80 p-4 rounded-xl">
+            <div className="bg-[#0e0b22]/80 border border-violet-500/20 p-4 rounded-xl">
               <div className="flex items-center justify-between text-slate-400 text-xs">
                 <span>Direct Operational COGS</span>
                 <Briefcase className="w-4 h-4 text-amber-400" />
@@ -211,7 +211,7 @@ export default function PortfolioDashboard() {
               <div className="text-[11px] text-slate-400 mt-1">Direct labor + infrastructure</div>
             </div>
 
-            <div className="bg-slate-900/60 border border-slate-800/80 p-4 rounded-xl">
+            <div className="bg-[#0e0b22]/80 border border-violet-500/20 p-4 rounded-xl">
               <div className="flex items-center justify-between text-slate-400 text-xs">
                 <span>Delivery Capacity Invested</span>
                 <Clock className="w-4 h-4 text-rose-400" />
@@ -225,10 +225,10 @@ export default function PortfolioDashboard() {
         )}
 
         {/* Real Rails 70/30 Workspace Split */}
-        <div className="flex flex-col lg:flex-row gap-6 mt-6">
+        <div className="space-y-6 mt-6">
           {/* 70% Primary Stage: Strategic Matrix & Waterfall */}
-          <div className="w-full lg:w-[70%] space-y-6">
-            <div className="bg-slate-900/40 border border-slate-800/80 p-5 rounded-xl">
+          <div className="w-full space-y-6">
+            <div className="bg-[#0e0b22]/60 border border-violet-500/20 p-5 rounded-xl">
               <div className="flex items-center justify-between mb-4">
                 <div>
                   <h2 className="text-sm font-semibold text-white">Margin vs. Growth Strategic Quadrant</h2>
@@ -237,7 +237,7 @@ export default function PortfolioDashboard() {
                   </p>
                 </div>
                 <span className="text-[10px] font-mono bg-indigo-500/10 text-indigo-400 px-2 py-0.5 rounded border border-indigo-500/20">
-                  Primary Stage (70%)
+                  Cinematic Stage (100% Full Screen)
                 </span>
               </div>
 
@@ -303,8 +303,8 @@ export default function PortfolioDashboard() {
             </div>
 
             {/* Offerings Performance Table */}
-            <div className="bg-slate-900/40 border border-slate-800/80 rounded-xl overflow-hidden">
-              <div className="p-4 border-b border-slate-800/80 flex items-center justify-between">
+            <div className="bg-[#0e0b22]/60 border border-violet-500/20 rounded-xl overflow-hidden">
+              <div className="p-4 border-b border-violet-500/20 flex items-center justify-between">
                 <h2 className="text-sm font-semibold text-white">Offerings Profitability & Lifecycle Matrix</h2>
                 <span className="text-xs text-slate-400 font-mono">{data?.offerings.length || 0} Offerings Tracked</span>
               </div>
@@ -377,9 +377,9 @@ export default function PortfolioDashboard() {
           </div>
 
           {/* 30% Intelligence Inspector & Waterfall */}
-          <div className="w-full lg:w-[30%] space-y-6">
+          <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-6">
             {/* Contribution Waterfall Breakdown */}
-            <div className="bg-slate-900/40 border border-slate-800/80 p-5 rounded-xl">
+            <div className="bg-[#0e0b22]/60 border border-violet-500/20 p-5 rounded-xl">
               <div className="flex items-center justify-between mb-3">
                 <h2 className="text-sm font-semibold text-white">Contribution Waterfall</h2>
                 <span className="text-[10px] font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded">P&L Flow</span>
@@ -421,12 +421,12 @@ export default function PortfolioDashboard() {
             </div>
 
             {/* Selected Offering Unit Economics Inspector (30% Sidebar) */}
-            <div className="bg-slate-900/40 border border-slate-800/80 p-5 rounded-xl">
+            <div className="bg-[#0e0b22]/60 border border-violet-500/20 p-5 rounded-xl">
               <div className="flex items-center justify-between pb-3 border-b border-slate-800">
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                   <h3 className="text-xs font-semibold text-white uppercase tracking-wider font-mono">
-                    Offering Inspector (30%)
+                    Dynamic Unit Economics Inspector
                   </h3>
                 </div>
                 {selectedOffering && (
@@ -484,6 +484,8 @@ export default function PortfolioDashboard() {
           </div>
         </div>
       </div>
+
+      <footer className="mt-8 pt-4 border-t border-violet-500/20 flex flex-col sm:flex-row justify-between items-center text-[11px] font-mono text-slate-400 gap-2"><div>Developed by: <span className="text-white font-semibold">Shithin P S</span> | PoC ID: <span className="text-violet-400">POC-27</span> | GitHub: <span className="text-violet-400">@shithinps</span></div><div className="text-slate-500">Infocreon Internship • Cinematic Intelligence Platform</div></footer>
 
       {/* About / Architecture Modal */}
       <AboutModal

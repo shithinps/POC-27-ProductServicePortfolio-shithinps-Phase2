@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -13,14 +13,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Product & Service Profitability Portfolio | Real Rails",
-  description: "Executive decision-support telemetry and margin intelligence dashboard for Real Rails POC-27",
+  title: "Infocreon Internship - Product & Service Profitability Portfolio",
+  description: "Executive decision-support telemetry and margin intelligence platform",
 };
 
 export default function RootLayout({
-  children,
+	children,
 }: Readonly<{
-  children: React.ReactNode;
+	 children: React.ReactNode;
 }>) {
   return (
     <html
