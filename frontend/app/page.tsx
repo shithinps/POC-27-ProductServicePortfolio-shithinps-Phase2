@@ -74,7 +74,7 @@ export default function PortfolioDashboard() {
     setLoading(true);
     try {
       const summaryRes = await fetch(
-        `http://127.0.0.1:8000/api/portfolio/summary?segment=${segmentFilter}&offering_type=${typeFilter}`
+        `${process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000"}/api/portfolio/summary?segment=${segmentFilter}&offering_type=${typeFilter}`
       );
       const summaryJson = await summaryRes.json();
       setData(summaryJson);
@@ -82,7 +82,7 @@ export default function PortfolioDashboard() {
         setSelectedOffering(summaryJson.offerings[0]);
       }
 
-      const waterfallRes = await fetch("http://127.0.0.1:8000/api/portfolio/waterfall");
+      const waterfallRes = await fetch(`${process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000"}/api/portfolio/waterfall`);
       const waterfallJson = await waterfallRes.json();
       setWaterfall(waterfallJson);
     } catch (err) {

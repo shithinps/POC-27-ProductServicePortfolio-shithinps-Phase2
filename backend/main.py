@@ -104,3 +104,6 @@ def get_waterfall_breakdown():
         {"stage": "Returns & SLA Rework", "amount": -returns_rework, "type": "deduction"},
         {"stage": "Net Contribution Margin", "amount": net_contrib, "type": "final"}
     ]
+@app.get('/health')
+def health_check():
+    return {'status': 'healthy', 'service': 'poc-27-backend'}

@@ -28,7 +28,7 @@ npm run dev
 Visit: \http://localhost:3000\
 "@
 Set-Content -Path VAR_REPORT.md -Value @"
-# Verification & Architecture Report (VAR) — POC-27
+# Verification & Architecture Report (VAR) ï¿½ POC-27
 
 ## System Architecture Summary
 - **Backend:** FastAPI (Python 3.14) serving clean REST endpoints with Pandas for real-time aggregations, contribution calculations, and quadrant classifications.
@@ -43,3 +43,18 @@ Set-Content -Path VAR_REPORT.md -Value @"
 | Waterfall API | PASSED | \GET /api/portfolio/waterfall\ outputs 4-stage contribution progression |
 | Next.js Client Render | PASSED | Interactive scatter quadrant, waterfall bars, and filter dropdowns verified |
 | Responsive Layout | PASSED | Mobile and desktop clean layout rendering |
+
+
+## Phase 2 â€” Docker Containerization & Cloud Mirroring
+
+### Architecture & Ports
+- **Frontend (Next.js)**: Port `3000` (`NEXT_PUBLIC_API_URL=http://localhost:8000`)
+- **Backend (FastAPI)**: Port `8000` (Health check: `GET /health`)
+
+### Environment Setup
+Copy `.env.example` to `.env` if customizing ports or API endpoints.
+
+### Docker Compose (Recommended)
+```bash
+docker compose up --build
+```
