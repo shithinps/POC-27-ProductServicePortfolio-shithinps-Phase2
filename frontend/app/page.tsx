@@ -167,6 +167,7 @@ export default function PortfolioDashboard() {
             >
               <RefreshCw className={`w-4 h-4 ${loading ? "animate-spin text-indigo-400" : ""}`} />
             </button>
+            <span className="flex items-center gap-1.5 rounded-lg border border-indigo-500/30 bg-indigo-950/60 px-3 py-1.5 text-xs text-indigo-200">Built by <strong className="font-semibold text-white">Shithin P S</strong> (@shithinps)</span>
           </div>
         </header>
 
